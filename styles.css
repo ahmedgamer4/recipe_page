@@ -66,12 +66,18 @@ body {
   margin-bottom: 10px;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
 .right {
   width: 55%;
 }
 
 .ingredients h3 {
-  margin: 20px 0;
+  margin-bottom: 20px;
   font-family: var(--font-two);
 }
 
@@ -108,4 +114,54 @@ h4 {
 
 .instruct-item p {
   width: 90%;
+}
+
+.left {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.206);
+  width: 206px;
+  height: 347px;
+  color: #333;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.left p:first-child {
+  color: rgba(51, 51, 51, 0.71);
+  font-size: 11px;  
+}
+
+@media screen and (max-width: 768px) {
+  .left {
+    display: none;
+  }
+  
+  .content {
+    flex-direction: column;
+  }
+  
+  .hidden {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 237px;
+    color: #333;
+    gap: 20px;
+    font-size: 14px; 
+  }
+
+  .hidden div:first-child {
+    flex-grow: 3;
+  }
 }
